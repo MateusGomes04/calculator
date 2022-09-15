@@ -11,8 +11,25 @@ class CalcController {
 
     initialize(){
 
-        this._dateEL.innerHTML = "15/09/2022";
-        this._timeEL.innerHTML = "08:48";
+    }
+
+    get displayTime(){
+        return this._timeEL.innerHTML;
+
+    }
+
+    set displayTime(value){
+        return this._timeEL.innerHTML = value;
+
+    }
+
+    get displayDate(){
+        return this._dateEL.innerHTML;
+
+    }
+
+    set displayDate(value) {
+        return this._dateEL.innerHTML = value;
 
     }
 
@@ -21,18 +38,18 @@ class CalcController {
 
     }
 
-    set displayCalc(valor){
-        this._displayCalcEL.innerHTML = valor;
+    set displayCalc(value){
+        this._displayCalcEL.innerHTML = value;
 
     }
 
     get currentDate(){
-        return this._currentDate;
+        return new Date();
 
     }
 
-    set currentDate(valor){
-        this._currentDate = valor;
+    set currentDate(value){
+        this._currentDate = value;
 
     }
 
