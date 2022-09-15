@@ -42,8 +42,13 @@ class CalcController {
                 console.log(btn.className.baseVal.replace("btn-", "s"));
             
             });
+
+            this.addEventListenerALL(btn, "mouseover moseup mousedown", e => {
+
+                btn.style.cursor = "pointer";
+            });
        
-        })
+        });
     }
 
     setDisplayDateTime(){
