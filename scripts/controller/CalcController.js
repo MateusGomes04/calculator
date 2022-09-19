@@ -84,9 +84,22 @@ class CalcController {
     calc(){
 
         let last = this._operation.pop();
-
         let result = eval(this._operation.join(""));
-        this._operation = [result, last];
+
+        if (last == "%") {
+
+            result/= 100;
+            this._operation = [result];
+
+
+        } else {
+
+           
+            this._operation = [result, last];
+
+        }
+
+      
         this.setLastNumberToDisplay();
                 
 
